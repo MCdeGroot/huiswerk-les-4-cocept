@@ -48,20 +48,26 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2 {
     font-size: 2rem;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 h3 {
     font-size: 1.5rem;
+    padding: 1.5rem 0;
 }
 
 h4 {
     font-size: 1.2rem;
+    padding: 1.2rem 0;
+}
+h5 {
+    font-size: 1rem;
+    padding-top: 0.5rem;
 }
 
 p {
     font-size: 1rem;
-
+    padding: 1rem 0;
 }
 
 
@@ -79,7 +85,7 @@ p {
     display: flex;
     flex-direction: column;
     flex: 0 1 1200px; /*1200px gepakt volgens deze website https://van-ons.nl/blog/visueel-ontwerp/specificaties-van-een-goed-webdesign/*/
-    padding: 0 1rem 10rem;
+    padding: 1rem;
     align-items: center;
     text-align: center; /* tekst centreeren binnen de container*/
 }
@@ -115,8 +121,7 @@ img {
 
 .header {
     background-color: var(--color-blue);
-    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD  100%);
-    padding: 1rem 0 0 0;
+    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD 100%);
     color: white;
     position: relative;
 }
@@ -140,7 +145,9 @@ img {
 .header-content-styling-div {
     padding: 2rem 0 0 0;
     width: 100%;
+    margin-bottom: 10rem;
 }
+
 .nav-bar a {
     color: white;
 }
@@ -157,14 +164,29 @@ img {
 
 /* --------------- 4.2 Introduction ------------------- */
 
-.introduction{
-    background-color: var(--color-light-grey-background-projects) ;
+.introduction {
+    padding: 2rem 0 5rem  0;
 }
+
+.introduction h3{
+    color: var(--color-purple);
+    width: 75%;
+}
+
+.introduction a {
+    color: var(--color-purple);
+}
+
+.introduction p {
+    padding: 5rem 0 0 0;
+}
+
 
 /* --------------- 4.3 Projects ------------------- */
 
 .projects {
-    background-color: var(--color-light-grey-background-projects) ;
+    background-color: var(--color-light-grey-background-projects);
+    padding: 2rem 0 0 0;
 }
 
 .squiggle-line {
@@ -180,20 +202,128 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 2rem 0;
+    margin: 0 0 4rem 0;
 }
-.projects-article-information{
+
+.projects-article:nth-of-type(even) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 4rem 0;
+}
+
+.projects-article-information {
     flex: 0 0 300px;
     text-align: left;
     padding: 2rem;
 }
 
-.projects-article-image{
+.projects-article-information a {
+    color: var(--color-purple);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.projects-article-image {
     flex: 0 1 600px;
 }
 
-.projects-article-image img{
+.projects-article-image img {
     box-shadow: 0 32px 28px -10px rgba(0, 0, 0, 0.22);
 }
 
+/* --------------- 4.4 Services ------------------- */
+
+.services {
+    padding: 2rem 0 5rem  0;
+}
+
+.services > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-article {
+    min-height: 340px;
+    flex: 0 1 365px; /*ca. (1200px-6rem)/3*/
+    padding: 2rem;
+    border: 1px solid var(--color-purple);
+    text-align: left;
+    box-shadow: 0 0.6rem 1rem 0 rgba(0, 0, 0, 0.1);
+    color: var(--color-grey-service-tile);
+}
+
+.services-article img {
+    width: 50px;
+}
+
+.services-article h5 {
+    color: var(--color-purple)
+}
+
+
+/* --------------- 4.5 Form ------------------- */
+.form {
+    background-color: var(--color-blue);
+    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD 100%);
+    color: white;
+}
+
+.form-styling {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+}
+
+.form-styling label {
+    padding-top: 1rem;
+}
+
+.form-styling input,
+.form-styling textarea {
+    border: 1px solid var(--color-grey-service-tile);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--color-grey-service-tile);
+    width: 100%;
+}
+
+.form-styling input::placeholder,
+.form-styling textarea::placeholder {
+    color: var(--color-grey-service-tile);
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.form-styling button {
+    background-color: var(--color-pink);
+    border-radius: 1.5rem;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    color: white;
+    width: fit-content;
+    align-self: center;
+    text-transform: uppercase;
+    box-shadow: 0 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, .2);
+}
+
+/* --------------- 4.6 Footer ------------------- */
+.footer {
+    background-color: var(--color-black-standard-text);
+    color: white;
+}
+
+.footer p{
+  font-size: 0.6rem;
+}
+
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+
