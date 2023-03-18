@@ -57,11 +57,12 @@ h3 {
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 1.2rem 0;
 }
+
 h5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding-top: 0.5rem;
 }
 
@@ -136,7 +137,7 @@ img {
 .nav-bar > ul {
     display: flex;
     flex-direction: row;
-    flex: 0 1 500px;
+    flex: 0 1 400px;
     justify-content: space-between;
     padding: 0.5rem 0;
     list-style-type: none;
@@ -248,7 +249,7 @@ img {
 }
 
 .services-article {
-    min-height: 340px;
+    min-height: 350px;
     flex: 0 1 365px; /*ca. (1200px-6rem)/3*/
     padding: 2rem;
     border: 1px solid var(--color-purple);
@@ -326,4 +327,42 @@ img {
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
+@media screen and (max-width: 576px) {
 
+    h1, h2 {
+        font-size: 1.6rem;
+        padding: 1.6rem 0;
+    }
+    h3 {
+        font-size: 1.2rem;
+        padding: 1.5rem 0;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .projects-article {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    .projects-article:nth-of-type(even) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+
+    }
+    .projects-article-image {
+        flex: 0 1 auto;
+    }
+    .projects-article-information {
+        flex: 0 0 auto;
+    }
+
+
+}
